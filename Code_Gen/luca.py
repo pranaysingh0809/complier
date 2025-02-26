@@ -227,23 +227,6 @@ def cgen_base_exp(base_exp: TreeNode):
     print('li $a0 0\n')
 
   elif (first_child.token == 'new int'):
-    # CASO: ['new int', '[', 'EXP', ']'] -> Vetor de inteiros de EXP posições
-    ...
-
-
-  ...
-
-
-
-
-
-
-
-
-
-
-
-#cantinho do luca
 
 def cgen_metodo_list(metodo_list: TreeNode):
   for child in metodo_list.children:
@@ -264,7 +247,7 @@ def cgen_metodo(metodo: TreeNode):
 def cgen_metodo_d(metodo_d: TreeNode):
   param_number = 0
   if metodo_d.children[0].token == "PARAMS":
-    pass #TODO ver futuramente como carregar os parametros
+    pass 
   cgen_var_list(metodo_d.child("VAR_LIST"))
   cgen_cmd_list(metodo_d.child("CMD_LIST"))
   cgen_exp(metodo_d.child("EXP"))
@@ -277,12 +260,12 @@ def cgen_metodo_d(metodo_d: TreeNode):
 
 
 def cgen_var_list(varlist: TreeNode):
-  lw $a0 4($fp) #($a0  x)
+  lw $a0 4($fp)
 sw $a0 0($sp)
 addiu $sp $sp -4
 li $a0 0
-lw $t1 4($sp) #($t1  x)
-addiu $sp $sp 4 #(remove x)
+lw $t1 4($sp)
+addiu $sp $sp 4
 
   pass
 
