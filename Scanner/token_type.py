@@ -2,7 +2,7 @@ from enum import Enum
 
 class TokenType(Enum):
     
-    # palavras reservadas
+   
     BOOLEAN = 'boolean'
     CLASS = 'class'
     EXTENDS = 'extends'
@@ -25,12 +25,12 @@ class TokenType(Enum):
     NEW_INT = 'new int'
     NULL = 'null'
     
-    # literais
+
     ID = 'id'
     NUM = 'num'
     STR = 'str'
     
-    # operadores e pontuação
+  
     MINUS = '-'
     PLUS = '+'
     TIMES = '*'
@@ -47,7 +47,7 @@ class TokenType(Enum):
     COMMA = ','
     PERIOD = '.'
     
-    # parênteses, colchetes e chaves 
+ 
     LEFT_PAR = '('
     RIGHT_PAR = ')'
     LEFT_BRACKET = '['
