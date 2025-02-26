@@ -228,7 +228,6 @@ def cgen_base_exp(base_exp: TreeNode):
     print('li $a0 0\n')
 
   elif (first_child.token == 'new int'):
-    # CASO: ['new int', '[', 'EXP', ']'] -> Vetor de inteiros de EXP posições
     ...
 
 def cgen_pexp(pexp: TreeNode):
@@ -253,8 +252,3 @@ def cgen_pexp(pexp: TreeNode):
 
 
 
-
-
-
-#cantinho do luca
-#fehcado temporariamente
